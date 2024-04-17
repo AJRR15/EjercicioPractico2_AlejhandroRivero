@@ -1,0 +1,2 @@
+# EjercicioPractico2_AlejhandroRivero
+EjercicioPractico de Alejhandro Rivero
