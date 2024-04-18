@@ -1,0 +1,48 @@
+
+
+/* Comentario */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*body {
+    font-family: sans-serif;
+    padding: 80px 20px 0;
+    background-color: bisque;
+}*/
+
+
+
+.footer {
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .text {
+
+    font-size: 18px;
+}
+
+body {
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.video-container {
+    margin-top: 90px; /* Margen superior para separarse de la barra de navegación */
+}
+
+.navbar {
+    font-size: 20px;
+}
+
