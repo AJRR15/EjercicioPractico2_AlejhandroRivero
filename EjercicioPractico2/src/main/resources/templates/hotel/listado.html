@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="~{layout/plantilla :: head}">
-        <title></title>
-    </head>
-    <body>
-        <header th:replace="~{layout/plantilla :: header}"/>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>TicoHotel</title>
+</head>
+<body>
+    <header th:replace="~{layout/plantilla :: header}"/>
+    <article>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>¡Descubre la Experiencia de Nuestros Hoteles!</h2>
+                     <p>Bienvenido a Nuestros Hoteles, donde cada estancia es una oportunidad para crear recuerdos inolvidables. Sumérgete en un mundo de lujo, comodidad y servicio excepcional en nuestras ubicaciones selectas alrededor del globo. Desde las exuberantes playas tropicales hasta las majestuosas montañas, nuestros hoteles ofrecen una variedad de experiencias para satisfacer todos los gustos.</p>
 
-        <section th:replace="~{hotel/fragmentos :: BotonAgregar}"/>
-        <section th:replace="~{hotel/fragmentos :: ModalAgregar}"/> 
-        <section th:replace="~{hotel/fragmentos :: ListadoHoteles}"/>
+                </div>
+            </div>
+        </div>
+    <h1></h1>
+    
+    <section th:replace="~{hotel/fragmentos :: BotonAgregar}"/>
+    <section th:replace="~{hotel/fragmentos :: ModalAgregar}"/> 
+    <section th:replace="~{hotel/fragmentos :: ListadoHoteles}"/>
 
-
-        <footer th:replace="~{layout/plantilla :: footer}"/>      
-      
-    </body>
+    <footer th:replace="~{layout/plantilla :: footer}"/>      
+</body>
 </html>

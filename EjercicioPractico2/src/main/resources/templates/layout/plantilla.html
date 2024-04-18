@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
     <head th:fragment="head">
-        <title>HotelFinder.com</title>
+        <title>TicoHotel.com</title>
         <meta charset="UTF-8"/>
         <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
         <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
@@ -55,7 +55,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <ul class="navbar-nav">
-                            <li class="nav-item px-2"sec:authorize="hasRole('ROLE_ADMIN')"><a class="nav-menu-link nav-link" th:href="@{/hotel/listado}">Hoteles</a></li>
+                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/hotel/listado}">Hoteles</a></li>
                             <li class="nav-item px-2"sec:authorize="hasRole('ROLE_ADMIN')"><a class="nav-menu-link nav-link" th:href="@{/reserva/listado}">Reservas</a></li>
                             <li class="nav-item px-2"sec:authorize="hasRole('ROLE_ADMIN')"><a class="nav-menu-link nav-link" th:href="@{/usuario/listado}">Usuarios</a></li>
                             <li class="nav-item px-2"sec:authorize="hasRole('ROLE_ADMIN')"><a class="nav-menu-link nav-link" th:href="@{/empleado/listado}">Empleados</a></li>
