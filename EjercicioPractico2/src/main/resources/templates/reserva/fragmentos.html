@@ -10,9 +10,59 @@
                             type="button" 
                             class="btn btn-primary btn-block" 
                             data-bs-toggle="modal" 
-                            data-bs-target="#agregarReserva">
+                            data-bs-target="#ModalAgregar">
                             <i class="fas fa-plus"></i> 
                         </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2 Fragmento para agregar hotel, es la ventana modal -->
+        <section th:fragment="ModalAgregar">
+            <div id="ModalAgregar" 
+                 class="modal fade" 
+                 tabindex="-1" 
+                 aria-labelledby="exampleModalLabel" 
+                 aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title">Agregar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> 
+                        <form th:action="@{/reserva/guardar}" th:object="${reserva}"
+                              method="POST" class="was-validated" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="cliente_nombre">Nombre del Cliente</label>
+                                    <input type="text" class="form-control" name="cliente_nombre" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="num_huespedes">Numero de huespedes</label>
+                                    <input class="form-control"  type="text" name="num_huespedes" id="num_huespedes" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fecha_ingreso">Fecha de Ingreso</label>
+                                    <input class="form-control"  type="date" name="fecha_ingreso" id="fecha_ingreso" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fecha_salida">Fecha de Salida</label>
+                                    <input class="form-control"  type="date" name="fecha_salida" id="fecha_salida" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="hotel_id">hotel ID</label>
+                                    <input type="text" class="form-control" name="hotel_id" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="user">user ID</label>
+                                    <input type="text" class="form-control" name="user" required="true"/>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit">Guardar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -127,12 +177,6 @@
                                                     <i class="fas fa-trash"></i> Eliminar
                                                 </a>
                                             </td>
-                                            <td>
-                                                <a th:href="@{/reserva/modificar/}+${reserva.id}"
-                                                   class="btn btn-success">
-                                                    <i class="fas fa-pencil"></i> Actualizar
-                                                </a>
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -235,7 +279,7 @@
             </div>
         </section>
 
-        
-        
+
+
     </body>
 </html>

@@ -73,7 +73,7 @@ public class ProjectConfig implements WebMvcConfigurer {
                         "/hotel/nuevo","/hotel/guardar","/hotel/listado",
                         "/hotel/modificar/**", "/hotel/eliminar/**",
                         "/usuario/nuevo", "/usuario/guardar","/usuario/listado",
-                        "/usuario/modificar/**","/usuario/eliminar/**").hasRole("ADMIN")).formLogin((form) -> form.loginPage("/login").permitAll()).logout((logout) -> logout.permitAll());
+                        "/usuario/modificar/**","/usuario/eliminar/**","/empleado/**").hasRole("ADMIN")).formLogin((form) -> form.loginPage("/login").permitAll()).logout((logout) -> logout.permitAll());
         return http.build();
     }
     

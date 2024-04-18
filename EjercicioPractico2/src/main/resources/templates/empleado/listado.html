@@ -6,9 +6,12 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-        <section th:replace="~{reserva/fragmentos :: botonesAgregarReserva}"/>
-        <section th:replace="~{reserva/fragmentos :: ModalAgregar}"/>
-         <section th:replace="~{reserva/fragmentos :: listadoReservas}"/>
+
+        <section th:replace="~{empleado/fragmentos :: BotonAgregar}"/>
+        <section th:replace="~{empleado/fragmentos :: ModalAgregar}"/> 
+        <section th:replace="~{empleado/fragmentos :: ListadoEmpleados}"/>
+
+
         <footer th:replace="~{layout/plantilla :: footer}"/>      
       
     </body>
